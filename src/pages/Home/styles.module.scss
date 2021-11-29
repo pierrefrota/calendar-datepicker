@@ -43,44 +43,52 @@
                 }
             }
 
-            table {
-                border-collapse: collapse;
-                background-color: #FFF;
+            .calendarBody {
+                display: flex;
+                grid-gap: 1rem;
 
-                thead {
-                    font-weight: bold;
-                    text-transform: uppercase;
+                .calendarContent + .calendarContent {
+                    border-left: 1px solid var(--light-color);
+                    padding-left: 0.5rem;
                 }
+            
+                .calendarContent {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 1rem;
 
-                td {
-                    border: 1px solid var(--light-color);
-                    color: var(--primary-color);
-                    height: 48px;
-                    width: 48px;
-                    text-align: center;
-                }
-
-                tbody {
-                    td {
-                        color: var(--text-color);
-                        cursor: pointer;
-                        transition: background-color 0.3s ease;
+                    .calendarDaysWeek {
+                        display: grid;
+                        grid-template-columns: repeat(7, 1fr);
                         
-                        &:hover {
-                            background-color: var(--primary-color);
-                            color: #FFF;
-
+                        .calendarDaysWeekItem {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: var(--primary-color);
+                            height: 48px;
+                            width: 48px;
+                            text-align: center;
                         }
+                    }
 
-                        &.atualMonth {
-                            color: var(--text-color);
-                        }
+                    .calendarDaysOfMonth {
+                        display: grid;
+                        grid-template-columns: repeat(7, 1fr);
 
-                        &.otherMonth {
-                            color: var(--light-text-color);
+                        .calendarDaysOfMonthItem {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: var(--primary-color);
+                            height: 48px;
+                            width: 48px;
+                            text-align: center;
 
-                            &:hover {
-                                background-color: transparent;
+                            &.lastOrNextMonthDay {
+                                color: var(--light-text-color);
                             }
                         }
                     }
