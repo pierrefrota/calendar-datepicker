@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #21598e;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --text-color: #6c757d;
+  --light-text-color: #c4cbd1;
+}
+
 html,
 body {
   padding: 0;
@@ -13,4 +21,6 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }

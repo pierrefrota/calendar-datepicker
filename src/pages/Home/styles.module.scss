@@ -1,0 +1,91 @@
+
+.container {
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 800px;
+    color: var(--dark-color);
+    text-align: center;
+    
+    .content {
+        margin-top: 2rem;
+
+        .calendar {
+            text-align: center;
+
+            .calendarHeader {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+                color: var(--primary-color);
+                border-bottom: 1px solid var(--primary-color);
+                padding-bottom: 1rem;
+
+                & h2 + h2 {
+                    margin-left: 0.5rem;
+                    padding-left: 0.5rem;
+                    border-left: 1px solid var(--primary-color);
+                }
+
+                .month {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+
+                .year {
+                    font-size: 1.5rem;
+                }
+            }
+
+            table {
+                border-collapse: collapse;
+                background-color: #FFF;
+
+                thead {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                td {
+                    border: 1px solid var(--light-color);
+                    color: var(--primary-color);
+                    height: 48px;
+                    width: 48px;
+                    text-align: center;
+                }
+
+                tbody {
+                    td {
+                        color: var(--text-color);
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                        
+                        &:hover {
+                            background-color: var(--primary-color);
+                            color: #FFF;
+
+                        }
+
+                        &.atualMonth {
+                            color: var(--text-color);
+                        }
+
+                        &.otherMonth {
+                            color: var(--light-text-color);
+
+                            &:hover {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
