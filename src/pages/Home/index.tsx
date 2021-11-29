@@ -39,7 +39,7 @@ export const HomeScreen = () => {
 
     const getNextMonth = (e: any) => {
         e.preventDefault();
-        
+
         if ((month || month === 0) && year) { 
             if (month === 11 ) {
                 getCalendarDays(0, year + 1);
@@ -87,9 +87,13 @@ export const HomeScreen = () => {
 
                         <div className={styles.calendarContent}>
                             <div className={styles.calendarDaysWeek}>
-                                {daysNames.map((day, index) => {
-                                    <div className={styles.calendarDaysWeekItem}>{day}</div>
-                                })}
+                                <div className={styles.calendarDaysWeekItem}>dom</div>
+                                <div className={styles.calendarDaysWeekItem}>seg</div>
+                                <div className={styles.calendarDaysWeekItem}>ter</div>
+                                <div className={styles.calendarDaysWeekItem}>qua</div>
+                                <div className={styles.calendarDaysWeekItem}>qui</div>
+                                <div className={styles.calendarDaysWeekItem}>sex</div>
+                                <div className={styles.calendarDaysWeekItem}>sáb</div>
                             </div>
                             <div className={styles.calendarDaysOfMonth}>
                                 {dayTables.map((day: number, index: number) => {
@@ -104,9 +108,13 @@ export const HomeScreen = () => {
 
                         <div className={styles.calendarContent}>
                             <div className={styles.calendarDaysWeek}>
-                                {daysNames.map((day, index) => {
-                                    <div className={styles.calendarDaysWeekItem}>{day}</div>
-                                })}
+                                <div className={styles.calendarDaysWeekItem}>dom</div>
+                                <div className={styles.calendarDaysWeekItem}>seg</div>
+                                <div className={styles.calendarDaysWeekItem}>ter</div>
+                                <div className={styles.calendarDaysWeekItem}>qua</div>
+                                <div className={styles.calendarDaysWeekItem}>qui</div>
+                                <div className={styles.calendarDaysWeekItem}>sex</div>
+                                <div className={styles.calendarDaysWeekItem}>sáb</div>
                             </div>
                             <div className={styles.calendarDaysOfMonth}>
                                 {dayTables.map((day: number, index: number) => {
